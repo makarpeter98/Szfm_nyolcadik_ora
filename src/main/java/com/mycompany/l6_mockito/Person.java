@@ -19,12 +19,19 @@ public class Person {
     private String name;
 
     public static Person scannedPerson(PersonDataReader pdr){
-        return null;
+        int id;
+        String name;
+        id = pdr.getId();
+        name=pdr.getName();
+        return new Person(id, name);
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        int hash = 7;
+        hash = 11 * hash + this.id;
+        hash = 11 * hash + Objects.hashCode(this.name);
+        return hash;
     }
 
     @Override
