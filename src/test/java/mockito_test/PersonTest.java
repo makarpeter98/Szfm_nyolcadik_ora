@@ -91,7 +91,8 @@ public class PersonTest {
 
     @Test
     public void toStringShouldReturnString() {
-
+        String expected = "Person{" + "id=" + 4 + ", name=" + "George Smith" + '}';
+        Assertions.assertEquals(expected, underTest1.toString());
     }
 
     @Test
