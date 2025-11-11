@@ -84,7 +84,9 @@ public class PersonTest {
 
     @Test
     public void PersonConstructorShouldThrowExceptionForWrongID() {
-
+        Assertions.assertThrows(Exception.class, () -> {
+            new Person(-10, "Adam");
+        });
     }
 
     @Test
