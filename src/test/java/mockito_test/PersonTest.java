@@ -96,9 +96,9 @@ public class PersonTest {
     }
 
     @Test
-    //@Timeout(value = 1500, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 1500, unit = TimeUnit.MILLISECONDS)
     void test_this() throws InterruptedException {
-
+        Assertions.assertTimeout(Duration.ofMillis(5000), () -> Thread.sleep(1000));
     }
 
     @ParameterizedTest
