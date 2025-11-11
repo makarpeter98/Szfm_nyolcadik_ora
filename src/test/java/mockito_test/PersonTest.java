@@ -108,9 +108,9 @@ public class PersonTest {
     }
 
     @ParameterizedTest
-    @ValueSource(chars = {'0'})
+    @ValueSource(chars = {'T', 'o', 'm',  's', 'm', 'i', 't', 'h'})
     void containsCharShouldRetrunTrueForContainedChars(char input) {
-
+        assertTrue(underTest2.nameContainsChar(input), "char: " + input);
     }
 }
 
