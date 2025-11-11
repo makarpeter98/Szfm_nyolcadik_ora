@@ -12,6 +12,8 @@ import java.util.Scanner;
  *
  * @author admin
  */
+
+//Teszt
 public class Person {
     private int id;
     private String name;
