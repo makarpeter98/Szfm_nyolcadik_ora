@@ -83,6 +83,6 @@ public class Person {
     }
 
     public boolean nameContainsChar(char c){
-        return true;
+        return getName().contains(""+c);
     }
 }
