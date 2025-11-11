@@ -79,7 +79,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return null;
+        return "Person{" + "id=" + id + ", name=" + name + '}';
     }
 
     public boolean nameContainsChar(char c){
