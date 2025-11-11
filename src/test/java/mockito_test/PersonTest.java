@@ -101,11 +101,13 @@ public class PersonTest {
         Assertions.assertTimeout(Duration.ofMillis(5000), () -> Thread.sleep(1000));
     }
 
+    /*
+    Hibas teszt
     @Test
     @Timeout(value = 500, unit = TimeUnit.MILLISECONDS)
     void test_this_2() throws InterruptedException {
         Assertions.assertTimeout(Duration.ofMillis(5000), () -> Thread.sleep(1000));
-    }
+    }*/
 
     @ParameterizedTest
     @ValueSource(chars = {'T', 'o', 'm',  's', 'm', 'i', 't', 'h'})
