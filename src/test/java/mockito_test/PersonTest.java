@@ -101,6 +101,12 @@ public class PersonTest {
         Assertions.assertTimeout(Duration.ofMillis(5000), () -> Thread.sleep(1000));
     }
 
+    @Test
+    @Timeout(value = 500, unit = TimeUnit.MILLISECONDS)
+    void test_this_2() throws InterruptedException {
+        Assertions.assertTimeout(Duration.ofMillis(5000), () -> Thread.sleep(1000));
+    }
+
     @ParameterizedTest
     @ValueSource(chars = {'0'})
     void containsCharShouldRetrunTrueForContainedChars(char input) {
