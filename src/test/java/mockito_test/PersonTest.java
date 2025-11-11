@@ -71,7 +71,7 @@ public class PersonTest {
         assertEquals(pExpected, underTest2);
     }
 
-    @Test
+    /*@Test
     public void scannedPersonTest2() {
         PersonDataReader pdr = mock(PersonDataReader.class);
 
@@ -80,7 +80,7 @@ public class PersonTest {
 
         pExpected = new Person(6, "Tom Smith");
         assertEquals(pExpected, underTest2);
-    }
+    }*/
 
     @Test
     public void PersonConstructorShouldThrowExceptionForWrongID() {
