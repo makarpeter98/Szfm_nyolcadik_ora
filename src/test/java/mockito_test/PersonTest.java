@@ -45,6 +45,15 @@ public class PersonTest {
 
     @BeforeEach //@Before
     public void setUp() {
+        MockitoAnnotations.openMocks(this);
+        //PersonDataReader pdr = mock(PersonDataReader.class);
+        given(pdr.getId()).willReturn(4, 6);
+        given(pdr.getName()).willReturn("George Smith", "Tom Smith");
+
+        underTest1 = Person.scannedPerson(pdr);
+        underTest2 = Person.scannedPerson(pdr);
+        verify(pdr, times(2)).getId();
+        verify(pdr, times(2)).getName();
     }
 
     @AfterEach //@After
@@ -53,7 +62,13 @@ public class PersonTest {
 
     @Test
     public void scannedPersonTest() {
+        PersonDataReader pdr = mock(PersonDataReader.class);
 
+        Person pExpected = new Person(4, "George Smith");
+        assertEquals(pExpected, underTest1);
+
+        pExpected = new Person(6, "Tom Smith");
+        assertEquals(pExpected, underTest2);
     }
 
     @Test
