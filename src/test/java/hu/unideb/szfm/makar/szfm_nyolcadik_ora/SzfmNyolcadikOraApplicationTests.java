@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class SzfmNyolcadikOraApplicationTests {
 
-	/*@Mock
+	@Mock
 	private PersonRepository personRepository;
 	@Mock
 	private Model model;
@@ -39,5 +39,5 @@ class SzfmNyolcadikOraApplicationTests {
 		assertEquals("persons", viewName);
 		verify(personRepository).findAll();
 		verify(model).addAttribute("personsList", persons);
-	}*/
+	}
 }

@@ -16,5 +16,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
+    @Id
+    @GeneratedValue
+    private Integer id;
 
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private boolean enabled;
 }
